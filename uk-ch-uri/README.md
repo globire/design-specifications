@@ -7,13 +7,12 @@ This is the design specification for the UK Companies House URI library API.
 The official documentation of the API can be found (here)[https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/426891/uniformResourceIdentifiersCustomerGuide.pdf]
 
 ## Guidelines for writing an implementation
-
 Implementations should offer be structured and follow the API design, but also follow the idiomic structure of the particular programming language. When these goals conflict, language idiomacy should prevail.
 
 ### Examples
 The API documentation shows that the response contains a field CompanyName. This field is to be stored in the Company object, so naming object fields exactly as received from the API would result in API usage like; "Company.CompanyName". This is not idiomatic, a convention like "Company.Name" makes much more sense.
 
-In the API design specification we'll use snake notation. However, field conventions should be done as appropriate for the particular langauge. In a language like Go, we should therefore use "RegAddress", while in Rust the appropriate convention would be "reg_address". 
+In the API design specification we'll use snake notation. However, field conventions should be done as appropriate for the particular langauge. In a language like Go, we should therefore use "RegAddress", while in Rust the appropriate convention would be "reg_address".
 
 ## API Design
 
@@ -63,3 +62,19 @@ Check the official documentation for the exact purposes of the fields.
 - **object** limited_partnership: *LimitedPartnerships* (optional)
     - **uint** gen_partners: *NumGenPartners*
     - **uint** lim_partners: *NumLimPartners*
+
+##### Functions
+
+###### company.accounts.overdue()
+Should return a boolean value for whether or not the accounts are overdue
+
+###### company.returns.overdue()
+Should return a boolean value for whether or not the return is overdue
+
+###### company.has_overdue_tasks()
+Should return a boolean value for whether or not the return or accounts are overdue
+
+## Considerations
+- Fields like company.category and company.status should ideally be an enum. However not all languages support enums. How do deal with this?
+    - Create something close to enums for those languages or use just strings?
+    - Should enums be used in those languages that support them to be more idiomic or use strings everywhere for consistency?
