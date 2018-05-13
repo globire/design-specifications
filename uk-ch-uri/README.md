@@ -17,7 +17,7 @@ In the API design specification we'll use snake notation. However, field convent
 
 ## API Design
 
-### objects
+### Objects
 objects are defined as **type** *field name:* corresponding value.
 Optional means that the particular field/sub-object can be empty or not exist.
 
@@ -38,21 +38,21 @@ Check the official documentation for the exact purposes of the fields.
 - **string** category: CompanyCategory
 - **string** status: CompanyStatus
 - **string** country_of_origin: CountryofOrigin
-- **date** incorporation_**date**: Incorporation**date**
-- **date** registration_**date**: Registration**date**
-- **date** dissolution_**date**: Dissolution**date**
+- **date** incorporation_date: IncorporationDate
+- **date** registration_date: RegistrationDate
+- **date** dissolution_date: DissolutionDate
 - **object** previous_name: PreviousName (optional)
-    - **date** **date**: CON**date**
+    - **date** **date**: CONDate
     - **string** name: CompanyName
 - **object** accounts: Accounts
     - **uint** ref_day: AccountRefDay
     - **uint** ref_month: AccountRefMonth
-    - **date** next_due_**date**: NextDue**date**
-    - **date** last_made_up_**date**: LastMadeUp**date** (optional)
+    - **date** next_due_date: NextDueDate
+    - **date** last_made_up_date: LastMadeUpDat (optional)
     - **string** category: AccountsCategory (optional)
 - **object** returns: Returns
-    - **date** next_due_**date**: NextDue**date**
-    - **date** last_made_up_**date**: LastMadeUp**date**
+    - **date** next_due_date: NextDueDate
+    - **date** last_made_up_date: LastMadeUpDat (optional)
 - **object** mortgages: Mortgages (optional)
     - **uint** charges: NumMortCharges
     - **uint** outstanding: NumMortOutstanding
