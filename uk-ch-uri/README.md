@@ -18,48 +18,48 @@ In the API design specification we'll use snake notation. However, field convent
 ## API Design
 
 ### Objects
-objects are defined as **type** *field name:* corresponding value.
+objects are defined as **type** field name: *corresponding value*.
 Optional means that the particular field/sub-object can be empty or not exist.
 
 Check the official documentation for the exact purposes of the fields.
 
 #### Company
-- **string** name: CompanyName
-- **string** number: CompanyNumber
-- **object** reg_address: RegAddress
-    - **string** care_of: Careof
-    - **string** po_box: POBox
-    - **string** address_line1: AddressLine1
-    - **string** address_line2: AddressLine2
-    - **string** post_town: PostTown
-    - **string** county: County
-    - **string** country: Country
-    - **string** postcode: Postcode
-- **string** category: CompanyCategory
-- **string** status: CompanyStatus
-- **string** country_of_origin: CountryofOrigin
-- **date** incorporation_date: IncorporationDate
-- **date** registration_date: RegistrationDate
-- **date** dissolution_date: DissolutionDate
-- **object** previous_name: PreviousName (optional)
-    - **date** **date**: CONDate
-    - **string** name: CompanyName
-- **object** accounts: Accounts
-    - **uint** ref_day: AccountRefDay
-    - **uint** ref_month: AccountRefMonth
-    - **date** next_due_date: NextDueDate
-    - **date** last_made_up_date: LastMadeUpDat (optional)
-    - **string** category: AccountsCategory (optional)
-- **object** returns: Returns
-    - **date** next_due_date: NextDueDate
-    - **date** last_made_up_date: LastMadeUpDat (optional)
-- **object** mortgages: Mortgages (optional)
-    - **uint** charges: NumMortCharges
-    - **uint** outstanding: NumMortOutstanding
-    - **uint** part_statisfied: NumMortPartSatisfied
-    - **uint** satisfied: NumMortSatisfied
-- **object** sic_codes: SICCodes (optional)
-    - **array** text: SicText
-- **object** limited_partnership: LimitedPartnerships (optional)
-    - **uint** gen_partners: NumGenPartners
-    - **uint** lim_partners: NumLimPartners
+- **string** name: *CompanyName*
+- **string** number: *CompanyNumber*
+- **object** reg_address: *RegAddress*
+    - **string** care_of: *Careof*
+    - **string** po_box: *POBox*
+    - **string** address_line1: *AddressLine1*
+    - **string** address_line2: *AddressLine2*
+    - **string** post_town: *PostTown*
+    - **string** county: *County*
+    - **string** country: *Country*
+    - **string** postcode: *Postcode*
+- **string** category: *CompanyCategory*
+- **string** status: *CompanyStatus*
+- **string** country_of_origin: *CountryofOrigin*
+- **date** incorporation_date: *IncorporationDate*
+- **date** registration_date: *RegistrationDate*
+- **date** dissolution_date: *DissolutionDate*
+- **object** previous_name: *PreviousName* (optional)
+    - **date** **date**: *CONDate*
+    - **string** name: *CompanyName*
+- **object** accounts: *Accounts*
+    - **uint** ref_day: *AccountRefDay*
+    - **uint** ref_month: *AccountRefMonth*
+    - **date** next_due_date: *NextDueDate*
+    - **date** last_made_up_date: *LastMadeUpDat* (optional)
+    - **string** category: *AccountsCategory* (optional)
+- **object** returns: *Returns*
+    - **date** next_due_date: *NextDueDate*
+    - **date** last_made_up_date: *LastMadeUpDat* (optional)
+- **object** mortgages: *Mortgages* (optional)
+    - **uint** charges: *NumMortCharges*
+    - **uint** outstanding: *NumMortOutstanding*
+    - **uint** part_statisfied: *NumMortPartSatisfied*
+    - **uint** satisfied: *NumMortSatisfied*
+- **object** sic_codes: *SICCodes* (optional)
+    - **array** text: *SicText*
+- **object** limited_partnership: *LimitedPartnerships* (optional)
+    - **uint** gen_partners: *NumGenPartners*
+    - **uint** lim_partners: *NumLimPartners*
