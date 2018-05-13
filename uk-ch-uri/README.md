@@ -23,6 +23,7 @@ Optional means that the particular field/sub-object can be empty or not exist.
 Check the official documentation for the exact purposes of the fields.
 
 #### Company
+##### Structure
 - **string** name: *CompanyName*
 - **string** number: *CompanyNumber*
 - **object** reg_address: *RegAddress*
